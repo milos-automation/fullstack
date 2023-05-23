@@ -100,6 +100,12 @@ async function submitToGoogleSheet(company, name, email, phoneNumber, deliveryDa
   }
 }
 
+// Define a route to handle GET requests
+app.get('/', (req, res) => {
+  // Send the HTML page as the response
+  res.send('<html><body><h1>Hello, world!</h1></body></html>');
+});
+
 // Route to fetch card data
 app.get('/sign-data', async (req, res) => {
   try {
